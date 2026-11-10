@@ -1,2 +1,14 @@
-git test 
-hi 
+Points to remember 
+
+base - should be master branch to which we are comparing during Pull Request 
+compare to - should be the branches where we made changes 
+
+Steps to clone a repository 
+
+git clone git@github.com:Jeffin-G28153/Iris_analysis.git
+or 
+git clone https://github.com/Jeffin-G28153/Iris_analysis.git
+
+
+create a new branch 
+git switch -c branch-name

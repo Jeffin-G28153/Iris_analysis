@@ -40,6 +40,8 @@ def find_maximum_petal_length(df):
         df["petal length (cm)"].max()
     )
 
+print("Iris dataset analysis completed successfully.")
+
 def main():
     df = load_iris_data()
     dataset_summary(df)

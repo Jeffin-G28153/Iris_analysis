@@ -40,11 +40,15 @@ def find_maximum_petal_length(df):
         df["petal length (cm)"].max()
     )
 
+def average_petal_length_by_species(df):
+    print("\nAverage Petal Length by Species:")
+    print(df.groupby("species")["petal length (cm)"].mean())
 
 def main():
     df = load_iris_data()
     dataset_summary(df)
     average_sepal_length(df)
+    average_petal_length_by_species(df)
     find_maximum_petal_length(df)
 
 if __name__ == "__main__":

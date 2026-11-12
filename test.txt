@@ -5,10 +5,53 @@ compare to - should be the branches where we made changes
 
 Steps to clone a repository 
 
-git clone git@github.com:Jeffin-G28153/Iris_analysis.git
+1) git clone git@github.com:Jeffin-G28153/Iris_analysis.git
 or 
 git clone https://github.com/Jeffin-G28153/Iris_analysis.git
 
 
-create a new branch 
+2) create a new branch 
 git switch -c branch-name
+
+3) push branch from local to remote repo 
+git push -u origin branch-name
+
+4) make changes in the repository
+
+5) git add .
+6) git commit -m "message"
+7) git push
+
+Importanat Terminologies
+
+PULL 
+    -> fetch -> merge 
+
+    FETCH => downloads the commits from remote repo
+    MERGE => Merges local and remote repo
+
+git pull --rebase 
+if 2 contributors are makeing changes in local same repo simultaneaously then when contributor 1 tries to push the code to remote
+repo git will reject the pull since contributor 2 has made changes which contributor 1 does have 
+
+    Hence pull --rebase will dowload the latest commit in remote repo and use rebase to commit the local changes on top of the
+    latest commit in remote repo 
+    you fetch the remote changes and replay your local commits on top of them, creating a clean, linear history 
+
+    git pull --no-rebase origin dhanya-new-branch
+    git commit -m "Merge remote changes into dhanya-new-branch"
+
+PULL REQUEST 
+A Pull Request, or PR, is a GitHub request to review and merge one branch into another.
+
+A PR is not the same as git pull.
+
+git pull: downloads code to your computer.
+Pull Request: proposes merging branches on GitHub.
+
+STASH
+git stash temporarily stores uncommitted changes so you can switch branches or pull updates without committing unfinished work.
+
+git stash
+git stash push -m "working on EDA changes"
+git stash list

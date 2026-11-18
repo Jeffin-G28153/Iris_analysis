@@ -96,3 +96,12 @@ def test_average_petal_length_by_species(capsys):
     lines = [line.split() for line in output.splitlines()]
     assert ["setosa", "2.0"] in lines
     assert ["virginica", "6.0"] in lines
+
+def test_find_maximum_petal_length_empty(capsys):
+    df = pd.DataFrame({"petal length (cm)": []})
+
+    find_maximum_petal_length(df)
+
+    output = capsys.readouterr().out
+    assert "Maximum Petal Length" in output
+
